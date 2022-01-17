@@ -16,7 +16,8 @@ class HouseController extends Controller
     {
         //
 
-        $houses = House::all();
+        $houses = House::paginate(12);
+        //ddd($houses);
         return view('houses.index', compact('houses'));
     }
 
